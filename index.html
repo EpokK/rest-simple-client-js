@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Client REST</title>
+		<style type="text/css">
+			@import "css/bootstrap.min.css";
+			@import "css/bootstrap-responsive.min.css";
+			@import "css/rest-js.css";
+		</style>
+		<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/rest-js.js"></script>
+		<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="row-fluid" style="margin-top: 20px">
+				<div class="input-prepend input-append">
+					<div class="btn-group">
+						<select id="method">
+							<option value="GET">GET</option>
+							<option value="POST">POST</option>
+							<option value="PUT">PUT</option>
+							<option value="DELETE">DELETE</option>
+						</select>
+					</div>
+					<input class="span12" id="link" type="text" placeholder="Lien avec slash final">
+					<input class="span12" id="entry" type="text" placeholder="Point d'entr&eacute;e">
+					<button class="btn btn-primary btn-send" role="button" onclick="send()" data-loading-text="Loading...">Envoyer</button>
+				</div>
+				<form id="data">
+					<div id="first-param">
+						<input type="text" class="input-name" placeholder="Param&egrave;tre">
+						<input type="text" class="input-value" placeholder="Valeur">
+					</div>
+					<a href="#" class="btn btn-primary btn-addparam" onclick="add_param()">Ajouter un param&egrave;tre</a>
+					<a href="#" class="btn btn-warning" onclick="reset()">Reset</a>
+				</form>
+			</div>
+			<div class="row-fluid" style="margin-top: 20px">
+				<h4>R&eacute;sultat de la requ&ecirc;te</h4>
+				<pre class="prettyprint" id="result">/* Resultat de la requ&ecirc;te */</pre>
+			</div>
+		</div>
+	</body>
+</html>

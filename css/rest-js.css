@@ -1,0 +1,26 @@
+#method {
+	width: 100px;
+	border-radius: 5px 0 0 5px;
+}
+
+#link {
+	border-left: medium none;
+    border-radius: 0 0 0 0;
+}
+
+#entry {
+	border-left: medium none;
+    border-radius: 0;
+}
+
+#result {
+	padding: 10px;
+}
+
+#data input {
+	display: inline-block;
+}
+
+#data .btn {
+	vertical-align: top;
+}
